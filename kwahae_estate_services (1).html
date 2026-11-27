@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KWAHAE ESTATE SERVICES | Senanga Property & Rentals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
+          colors: {
+            fb: {
+              blue: '#1877F2',
+              blueHover: '#166FE5',
+              lightBg: '#F0F2F5',
+              lightCard: '#FFFFFF',
+              lightBorder: '#CED0D4',
+              darkBg: '#18191A',
+              darkCard: '#242526',
+              darkHover: '#3A3B3C',
+              darkBorder: '#3E4042',
+              green: '#42B72A',
+              whatsapp: '#25D366',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbar & smooth transitions */
+    * {
+      transition: background-color 0.2s ease, border-color 0.2s ease, color 0.15s ease;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(24, 119, 242, 0.35); }
+      50% { box-shadow: 0 0 0 8px rgba(24, 119, 242, 0); }
+    }
+    .logo-glow {
+      animation: pulseGlow 3s infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#F0F2F5] text-[#050505] dark:bg-[#18191A] dark:text-[#E4E6EB] min-h-screen flex flex-col">
+
+  <!-- Reusable SVG Logo Definition -->
+  <svg width="0" height="0" class="hidden" aria-hidden="true">
+    <defs>
+      <linearGradient id="keBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2D88FF" />
+        <stop offset="55%" stop-color="#1877F2" />
+        <stop offset="100%" stop-color="#0D5AC1" />
+      </linearGradient>
+      <linearGradient id="keLightBlueGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0E62D0" />
+        <stop offset="100%" stop-color="#4599FF" />
+      </linearGradient>
+      <filter id="keShadow" x="-15%" y="-15%" width="130%" height="130%">
+        <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#0A3B82" flood-opacity="0.28" />
+      </filter>
+
+      <!-- Main KWAHAE ESTATE SERVICES Symbol extracted from uploaded 198339.jpg -->
+      <symbol id="kwahae-logo" viewBox="0 0 220 220">
+        <g filter="url(#keShadow)">
+          <!-- Upper Right Triple Concentric Curved Arcs -->
+          <path d="M 126 24 A 86 86 0 0 1 178 158" fill="none" stroke="url(#keBlueGrad)" stroke-width="6.5" stroke-linecap="round" />
+          <path d="M 106 34 A 74 74 0 0 1 168 145" fill="none" stroke="url(#keLightBlueGrad)" stroke-width="6" stroke-linecap="round" />
+          <path d="M 86 44 A 62 62 0 0 1 157 132" fill="none" stroke="url(#keBlueGrad)" stroke-width="5.5" stroke-linecap="round" />
+
+          <!-- Lower Left Double Concentric Curved Arcs -->
+          <path d="M 46 58 A 85 85 0 0 0 88 184" fill="none" stroke="url(#keBlueGrad)" stroke-width="6.5" stroke-linecap="round" />
+          <path d="M 55 72 A 72 72 0 0 0 124 173" fill="none" stroke="url(#keLightBlueGrad)" stroke-width="6" stroke-linecap="round" />
+
+          <!-- Curved Hill Base under Rondavel Hut -->
+          <path d="M 54 102 Q 100 84 146 102 Q 100 94 54 102 Z" fill="url(#keBlueGrad)" />
+
+          <!-- Traditional Thatched-Roof African Hut / Rondavel -->
+          <!-- Hut Walls & Arched Doorway -->
+          <path d="M 76 74 L 124 74 L 124 93 Q 100 89 76 93 Z" fill="url(#keBlueGrad)" />
+          <path d="M 93 91 L 93 81 A 7 7 0 0 1 107 81 L 107 91 Z" fill="#0B3D82" />
+          <!-- Conical Thatched Roof with Texture Ridges -->
+          <path d="M 100 50 C 83 56 68 67 62 76 C 74 78 87 77 100 77 C 113 77 126 78 138 76 C 132 67 117 56 100 50 Z" fill="url(#keLightBlueGrad)" />
+          <path d="M 62 76 L 67 79 L 72 76 L 77 79 L 82 76 L 87 79 L 92 76 L 97 79 L 102 76 L 107 79 L 112 76 L 117 79 L 122 76 L 127 79 L 132 76 L 138 76" fill="none" stroke="#0D5AC1" stroke-width="1.8" stroke-linejoin="round" />
+
+          <!-- Bold Interconnected "KE" Monogram -->
+          <!-- Letter K -->
+          <path d="M 66 108 L 78 108 L 78 124 L 93 108 L 107 108 L 90 126 L 108 148 L 93 148 L 78 130 L 78 148 L 66 148 Z" fill="url(#keBlueGrad)" />
+          <!-- Letter E -->
+          <path d="M 111 108 L 143 108 L 143 117 L 123 117 L 123 123 L 140 123 L 140 132 L 123 132 L 123 139 L 144 139 L 144 148 L 111 148 Z" fill="url(#keBlueGrad)" />
+
+          <!-- Dynamic Flowing Blue Swoosh Cutting Across K and E -->
+          <path d="M 60 112 C 46 132 54 152 82 142 C 108 132 132 104 164 114 C 172 117 176 125 170 131 C 168 122 158 118 144 121 C 122 126 102 146 74 148 C 52 150 46 131 60 112 Z" fill="url(#keLightBlueGrad)" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- TOP NAVIGATION BAR (Facebook-Inspired Header) -->
+  <header class="sticky top-0 z-40 bg-white dark:bg-[#242526] border-b border-[#CED0D4] dark:border-[#3E4042] shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2">
+      
+      <!-- Left: Extracted Custom Logo + Brand Name -->
+      <div class="flex items-center gap-2.5 cursor-pointer shrink-0" onclick="switchTab('browse')">
+        <div class="w-11 h-11 rounded-full bg-blue-50 dark:bg-[#3A3B3C] flex items-center justify-center p-0.5 border border-blue-200 dark:border-blue-800 logo-glow">
+          <svg class="w-10 h-10"><use href="#kwahae-logo"></use></svg>
+        </div>
+        <div class="leading-tight">
+          <div class="flex items-center gap-1.5">
+            <span class="font-extrabold text-sm sm:text-base md:text-lg tracking-tight text-[#1877F2]">KWAHAE ESTATE SERVICES</span>
+            <span class="hidden lg:inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">SENANGA</span>
+          </div>
+          <p class="text-[11px] text-gray-500 dark:text-[#B0B3B8] hidden sm:block">100% Free for Tenants • Verified Senanga Rentals</p>
+        </div>
+      </div>
+
+      <!-- Center: Facebook-Style Navigation Tabs (Desktop) -->
+      <nav class="hidden md:flex items-center gap-1 h-full">
+        <button onclick="switchTab('browse')" id="nav-browse" class="nav-tab h-full px-5 flex items-center gap-2 font-semibold text-sm border-b-[3px] border-[#1877F2] text-[#1877F2]">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          Browse Houses
+        </button>
+        <button onclick="switchTab('landlord')" id="nav-landlord" class="nav-tab h-full px-5 flex items-center gap-2 font-semibold text-sm border-b-[3px] border-transparent text-gray-600 dark:text-[#B0B3B8] hover:bg-gray-100 dark:hover:bg-[#3A3B3C] rounded-t-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          Landlord Portal & Pricing
+        </button>
+        <button onclick="switchTab('services')" id="nav-services" class="nav-tab h-full px-5 flex items-center gap-2 font-semibold text-sm border-b-[3px] border-transparent text-gray-600 dark:text-[#B0B3B8] hover:bg-gray-100 dark:hover:bg-[#3A3B3C] rounded-t-lg">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Home Services & Ads
+        </button>
+      </nav>
+
+      <!-- Right: Saved Houses Button + Facebook-Style Light/Dark Mode Switch -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Saved Houses Pill -->
+        <button onclick="openSavedModal()" class="relative flex items-center gap-1.5 px-3 py-2 rounded-full bg-[#E7F3FF] hover:bg-[#DBE7F2] dark:bg-[#3A3B3C] dark:hover:bg-[#4E4F50] text-[#1877F2] dark:text-[#2D88FF] font-semibold text-xs sm:text-sm">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/></svg>
+          <span class="hidden sm:inline">Saved</span>
+          <span id="saved-count" class="px-1.5 py-0.2 text-xs font-bold rounded-full bg-[#1877F2] text-white">0</span>
+        </button>
+
+        <!-- Facebook-Style Light / Dark Mode Switch -->
+        <button id="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Dark or Light Mode" title="Switch Light / Dark Mode"
+          class="relative inline-flex items-center h-9 w-16 rounded-full p-1 bg-gray-200 dark:bg-[#3A3B3C] border border-gray-300 dark:border-[#4E4F50] focus:outline-none">
+          <span class="sr-only">Toggle Dark Mode</span>
+          <!-- Sun Icon (Left) -->
+          <span class="w-6 h-6 flex items-center justify-center text-amber-500 z-10">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+          </span>
+          <!-- Moon Icon (Right) -->
+          <span class="w-6 h-6 flex items-center justify-center text-blue-400 ml-auto z-10">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+          </span>
+          <!-- Sliding Knob -->
+          <span id="theme-knob" class="absolute left-1 top-1 w-7 h-7 rounded-full bg-white dark:bg-[#1877F2] shadow-md transform transition-transform duration-200 flex items-center justify-center">
+          </span>
+        </button>
+
+        <!-- Post House CTA -->
+        <button onclick="openPostModal()" class="bg-[#1877F2] hover:bg-[#166FE5] text-white font-semibold text-xs sm:text-sm px-3.5 py-2 rounded-full shadow-sm flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          <span>Post Property</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Bottom-of-Header Tab Bar -->
+    <div class="flex md:hidden border-t border-[#CED0D4] dark:border-[#3E4042] bg-white dark:bg-[#242526]">
+      <button onclick="switchTab('browse')" id="mob-nav-browse" class="flex-1 py-2.5 text-xs font-bold text-center border-b-2 border-[#1877F2] text-[#1877F2]">
+        Browse Houses
+      </button>
+      <button onclick="switchTab('landlord')" id="mob-nav-landlord" class="flex-1 py-2.5 text-xs font-semibold text-center border-b-2 border-transparent text-gray-600 dark:text-[#B0B3B8]">
+        Landlord & Pricing
+      </button>
+      <button onclick="switchTab('services')" id="mob-nav-services" class="flex-1 py-2.5 text-xs font-semibold text-center border-b-2 border-transparent text-gray-600 dark:text-[#B0B3B8]">
+        Services & Ads
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-5">
+
+    <!-- ========================================================= -->
+    <!-- TAB 1: BROWSE HOUSES (TENANT DISCOVERY - 100% FREE)       -->
+    <!-- ========================================================= -->
+    <section id="tab-browse" class="space-y-5">
+
+      <!-- Colorful Facebook-Gradient Hero Banner -->
+      <div class="rounded-2xl bg-gradient-to-r from-[#1877F2] via-[#1B64D8] to-[#0D47A1] text-white p-5 sm:p-7 shadow-md relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-12 opacity-15 pointer-events-none">
+          <svg class="w-64 h-64"><use href="#kwahae-logo"></use></svg>
+        </div>
+        <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+          <div class="max-w-2xl">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold mb-3">
+              <span class="w-2 h-2 rounded-full bg-[#42B72A] animate-ping"></span>
+              <span>Free Access for Tenants • No Login Needed to Browse</span>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">
+              Find Your Next Home, Room or Shop in Senanga District
+            </h1>
+            <p class="text-blue-100 text-sm sm:text-base">
+              Browse verified houses, boarding rooms, and commercial shops across Senanga Town Centre, Nzuli Compound, Mulamba Area, Airport Area, Mungulu Plots - East, Mungule - West, Senanga Day - Mission, Mwanambinyi East - Tank Road, Katuya, and Hospital Area. Chat directly with landlords on WhatsApp.
+            </p>
+          </div>
+          <div class="flex flex-wrap sm:flex-nowrap gap-2.5 shrink-0">
+            <button onclick="openPostModal()" class="px-4 py-3 rounded-xl bg-white text-[#1877F2] font-bold text-sm hover:bg-blue-50 shadow-sm flex items-center gap-2">
+              <span>+ List Your Property Free</span>
+            </button>
+            <button onclick="openVirtualTourModal('General Senanga Relocation')" class="px-4 py-3 rounded-xl bg-[#42B72A] hover:bg-[#36A420] text-white font-bold text-sm shadow-sm flex items-center gap-2">
+              <span>📹 Relocating? Book Video Tour (K150)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sponsored Homepage Hero Partner Slot (Monetization Demo: K450/mo) -->
+      <div class="rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 p-[2px] shadow-sm">
+        <div class="bg-white dark:bg-[#242526] rounded-[14px] px-4 py-3 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <span class="px-2.5 py-1 rounded-lg bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-300 text-[11px] font-extrabold uppercase tracking-wide shrink-0">
+              Sponsored Partner
+            </span>
+            <div>
+              <p class="font-bold text-sm sm:text-base">☀️ Zambezi Solar & Hardware Senanga — Load-Shedding Backup Kits & Paints</p>
+              <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Located near Senanga Main Market • Free delivery for KWAHAE tenants!</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0 w-full sm:w-auto justify-end">
+            <button onclick="triggerWhatsApp('Zambezi Solar & Hardware Senanga', '+260977001122', 'Hello! I saw your sponsored banner on KWAHAE ESTATE SERVICES.')" class="px-3 py-1.5 rounded-lg bg-[#25D366] hover:bg-[#20BD5A] text-white text-xs font-bold">
+              WhatsApp Shop
+            </button>
+            <button onclick="switchTab('services')" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-[#3A3B3C] text-xs font-semibold hover:bg-gray-200 dark:hover:bg-[#4E4F50]">
+              Advertise (K450/mo)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- District Search & Filter Card -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl p-4 sm:p-5 border border-[#CED0D4] dark:border-[#3E4042] shadow-sm space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <!-- Keyword Search -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 dark:text-[#B0B3B8] uppercase mb-1">Search Keyword</label>
+            <div class="relative">
+              <input id="filter-search" type="text" oninput="renderProperties()" placeholder="e.g. 2 bedroom, borehole, shop..."
+                class="w-full pl-9 pr-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] border border-transparent focus:border-[#1877F2] focus:bg-white dark:focus:bg-[#242526] text-sm outline-none" />
+              <svg class="w-4 h-4 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            </div>
+          </div>
+
+          <!-- Senanga Neighbourhood -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 dark:text-[#B0B3B8] uppercase mb-1">Senanga Area / Neighbourhood</label>
+            <select id="filter-area" onchange="renderProperties()" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] text-sm font-medium outline-none focus:ring-2 focus:ring-[#1877F2]">
+              <option value="All">All Senanga Areas</option>
+              <option value="Town Centre / Boma">Town Centre / Boma</option>
+              <option value="Mwanambinyi East - Tank Rd">Mwanambinyi East - Tank Rd</option>
+              <option value="Katuya">Katuya</option>
+              <option value="Hospital Area">Hospital Area</option>
+              <option value="Nzuli Compound">Nzuli Compound</option>
+              <option value="Secondary School Area">Secondary School Area</option>
+
+            </select>
+          </div>
+
+          <!-- Property Type -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 dark:text-[#B0B3B8] uppercase mb-1">Property Type</label>
+            <select id="filter-type" onchange="renderProperties()" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] text-sm font-medium outline-none focus:ring-2 focus:ring-[#1877F2]">
+              <option value="All">All Property Types</option>
+              <option value="Single Room / Bedsitter">Single Room / Bedsitter</option>
+              <option value="1–3 Bedroom House">1–3 Bedroom House</option>
+              <option value="Boarding House">Boarding House</option>
+              <option value="Commercial Shop / Office">Commercial Shop / Office</option>
+              <option value="Plot / Land">Plot / Land</option>
+            </select>
+          </div>
+
+          <!-- Max Rent ZMW -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 dark:text-[#B0B3B8] uppercase mb-1">Max Monthly Rent (ZMW)</label>
+            <select id="filter-rent" onchange="renderProperties()" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] text-sm font-medium outline-none focus:ring-2 focus:ring-[#1877F2]">
+              <option value="999999">Any Budget (ZMW)</option>
+              <option value="800">Up to K800 / mo</option>
+              <option value="1500">Up to K1,500 / mo</option>
+              <option value="3000">Up to K3,000 / mo</option>
+              <option value="5000">Up to K5,000 / mo</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Quick Amenity & Trust Filter Pills -->
+        <div class="flex flex-wrap items-center justify-between gap-2 pt-2 border-t border-gray-200 dark:border-[#3E4042]">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="text-xs font-bold text-gray-500 dark:text-[#B0B3B8] mr-1">Quick Filters:</span>
+            <button onclick="toggleAmenityFilter('Verified')" id="pill-Verified" class="amenity-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-blue-100 dark:hover:bg-[#4E4F50]">
+              ✅ Verified Only
+            </button>
+            <button onclick="toggleAmenityFilter('Borehole / Water')" id="pill-Borehole / Water" class="amenity-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-blue-100 dark:hover:bg-[#4E4F50]">
+              💧 Borehole / Water
+            </button>
+            <button onclick="toggleAmenityFilter('ZESCO / Solar')" id="pill-ZESCO / Solar" class="amenity-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-blue-100 dark:hover:bg-[#4E4F50]">
+              ⚡ ZESCO / Solar
+            </button>
+            <button onclick="toggleAmenityFilter('Fenced Yard')" id="pill-Fenced Yard" class="amenity-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-blue-100 dark:hover:bg-[#4E4F50]">
+              🧱 Fenced Yard
+            </button>
+            <button onclick="toggleAmenityFilter('AvailableOnly')" id="pill-AvailableOnly" class="amenity-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-blue-100 dark:hover:bg-[#4E4F50]">
+              🟢 Available Now
+            </button>
+          </div>
+          <button onclick="resetFilters()" class="text-xs font-bold text-[#1877F2] hover:underline">Reset All</button>
+        </div>
+      </div>
+
+      <!-- Results Count & Sort Bar -->
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <p class="text-sm font-semibold text-gray-700 dark:text-[#B0B3B8]">
+          Showing <span id="results-count" class="text-[#1877F2] font-extrabold">0</span> properties in Senanga District
+        </p>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="text-gray-500 dark:text-[#B0B3B8]">Sort by:</span>
+          <select id="sort-order" onchange="renderProperties()" class="px-2.5 py-1.5 rounded-lg bg-white dark:bg-[#242526] border border-[#CED0D4] dark:border-[#3E4042] font-semibold outline-none">
+            <option value="featured">Featured & Urgent First</option>
+            <option value="price-asc">Rent: Low to High (ZMW)</option>
+            <option value="price-desc">Rent: High to Low (ZMW)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- PROPERTY LISTINGS FEED GRID -->
+      <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Populated dynamically via JS -->
+      </div>
+
+      <!-- Mid-Feed Local Moving Partner Ad Banner -->
+      <div class="rounded-2xl bg-white dark:bg-[#242526] border-2 border-dashed border-[#1877F2]/50 p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-[#1877F2] flex items-center justify-center text-2xl shrink-0">
+            🚚
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-extrabold text-base">Need a Canter or Van to Move in Senanga?</h3>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">Moving Partner</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-[#B0B3B8]">Book trusted local drivers from Boma, Mongu Road, or Kataba starting from K150 per trip.</p>
+          </div>
+        </div>
+        <button onclick="switchTab('services')" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs sm:text-sm shrink-0">
+          Book Moving Transport
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 2: LANDLORD PORTAL & SENANGA ZMW PRICING TABLE        -->
+    <!-- ========================================================= -->
+    <section id="tab-landlord" class="hidden space-y-6">
+
+      <!-- Header Card -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl p-5 sm:p-6 border border-[#CED0D4] dark:border-[#3E4042] shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-blue-100 text-[#1877F2] dark:bg-blue-900/40 dark:text-blue-300">
+            LANDLORD & CARETAKER MONETIZATION HUB
+          </span>
+          <h2 class="text-2xl font-extrabold mt-2">Fill Your Senanga Houses Faster & Build Tenant Trust</h2>
+          <p class="text-sm text-gray-600 dark:text-[#B0B3B8] mt-1">
+            Your first standard listing is <strong>100% Free forever</strong>. Boost visibility or get physically verified using Airtel Money, MTN MoMo, or Zamtel Kwacha.
+          </p>
+        </div>
+        <button onclick="openPostModal()" class="px-5 py-3 rounded-xl bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-sm shadow-md shrink-0">
+          + Post New Property (Free)
+        </button>
+      </div>
+
+      <!-- Combo Launch Offer Banner -->
+      <div class="rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-5 shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-white/20 text-xs font-extrabold uppercase">Best Value Launch Bundle • Save K30</span>
+          <h3 class="text-xl font-extrabold mt-1">Physical Inspection + Featured Spotlight Combo — K195</h3>
+          <p class="text-emerald-100 text-xs sm:text-sm mt-0.5">
+            Includes on-site ZESCO/water check, 10 HD photos, green "Site Verified" badge, PLUS 14 days pinned at the top of Senanga searches (K225 value).
+          </p>
+        </div>
+        <button onclick="openMoMoCheckout('Launch Bundle: Site Inspection + Featured Spotlight', 195, 'bundle')" class="px-5 py-3 rounded-xl bg-white text-emerald-800 hover:bg-emerald-50 font-extrabold text-sm shadow shrink-0">
+          Pay K195 via Mobile Money
+        </button>
+      </div>
+
+      <!-- 1. Landlord Listing & Visibility Boosts Table -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl border border-[#CED0D4] dark:border-[#3E4042] shadow-sm overflow-hidden">
+        <div class="px-5 py-4 bg-blue-50/70 dark:bg-[#2D2E30] border-b border-[#CED0D4] dark:border-[#3E4042] flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-lg text-[#1877F2]">1. Landlord Listing & Visibility Boosts (ZMW)</h3>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Priced at ~3%–8% of Senanga monthly rents for instant mobile-money activation</p>
+          </div>
+          <span class="text-xl">🚀</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-[#3E4042] text-xs uppercase text-gray-500 dark:text-[#B0B3B8] bg-gray-50 dark:bg-[#1E1F20]">
+                <th class="py-3 px-4">Tier / Product</th>
+                <th class="py-3 px-4">Price (ZMW)</th>
+                <th class="py-3 px-4">Billing Cycle</th>
+                <th class="py-3 px-4">What the Landlord Gets</th>
+                <th class="py-3 px-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-[#3E4042]">
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Basic Listing (1 Property)</td>
+                <td class="py-3.5 px-4 font-extrabold text-emerald-600 dark:text-emerald-400">K0 (Free)</td>
+                <td class="py-3.5 px-4 text-xs">30 days (Renewable)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Standard search placement, up to 6 photos, direct WhatsApp/call button.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openPostModal()" class="px-3 py-1.5 rounded-lg bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 font-bold text-xs">Post Free</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Urgent Bump (Top Refresh)</td>
+                <td class="py-3.5 px-4 font-extrabold text-[#1877F2]">K35</td>
+                <td class="py-3.5 px-4 text-xs">7 days (One-off)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Pushes listing back to #1 in fresh results with an "Urgent" badge.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Urgent Bump (7 Days)', 35, 'urgent')" class="px-3 py-1.5 rounded-lg bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs">Buy K35</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Featured Homepage Spotlight</td>
+                <td class="py-3.5 px-4 font-extrabold text-[#1877F2]">K85</td>
+                <td class="py-3.5 px-4 text-xs">14 days (One-off)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Pinned at the top of Senanga searches, highlighted border + WhatsApp status share.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Featured Homepage Spotlight (14 Days)', 85, 'featured')" class="px-3 py-1.5 rounded-lg bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs">Buy K85</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Multi-Property Landlord Pro</td>
+                <td class="py-3.5 px-4 font-extrabold text-[#1877F2]">K180</td>
+                <td class="py-3.5 px-4 text-xs">Per month</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Up to 10 active listings, 2 free Urgent Bumps/month, and view/call analytics.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Multi-Property Landlord Pro (Monthly)', 180, 'pro')" class="px-3 py-1.5 rounded-lg bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs">Subscribe K180</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 2. Verification & Trust Badges Table -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl border border-[#CED0D4] dark:border-[#3E4042] shadow-sm overflow-hidden">
+        <div class="px-5 py-4 bg-emerald-50/70 dark:bg-[#2D2E30] border-b border-[#CED0D4] dark:border-[#3E4042] flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-lg text-emerald-700 dark:text-emerald-400">2. Verification & Trust Badges (ZMW)</h3>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Eliminate rental scams and attract incoming civil servants, teachers, health workers & NGOs</p>
+          </div>
+          <span class="text-xl">🛡️</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-[#3E4042] text-xs uppercase text-gray-500 dark:text-[#B0B3B8] bg-gray-50 dark:bg-[#1E1F20]">
+                <th class="py-3 px-4">Verification Tier</th>
+                <th class="py-3 px-4">Price (ZMW)</th>
+                <th class="py-3 px-4">Validity</th>
+                <th class="py-3 px-4">What the Landlord Gets</th>
+                <th class="py-3 px-4 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-[#3E4042]">
+              <tr>
+                <td class="py-3.5 px-4 font-bold">ID & Ownership Verification</td>
+                <td class="py-3.5 px-4 font-extrabold text-emerald-600 dark:text-emerald-400">K60</td>
+                <td class="py-3.5 px-4 text-xs">One-off (12 mos)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">NRC and council/title letter check; displays green <strong>"Verified Owner"</strong> badge.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('ID & Ownership Verification Badge', 60, 'verified_owner')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs">Verify K60</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Physical Inspection + Photo Pack</td>
+                <td class="py-3.5 px-4 font-extrabold text-emerald-600 dark:text-emerald-400">K140</td>
+                <td class="py-3.5 px-4 text-xs">One-off per property</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">On-site Senanga visit (ZESCO, water, security check), 10 HD photos + <strong>"Site Verified"</strong> badge.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Physical Inspection + Photo Pack', 140, 'site_verified')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs">Book K140</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Compound / Boarding House Audit</td>
+                <td class="py-3.5 px-4 font-extrabold text-emerald-600 dark:text-emerald-400">K250</td>
+                <td class="py-3.5 px-4 text-xs">One-off (Up to 6 units)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Full compound inspection, HD photos per room type + <strong>"Verified Compound"</strong> badge.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Compound / Boarding House Audit', 250, 'verified_compound')" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs">Book K250</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Active Listings Manager (Toggle Available / Rented & Apply Boosts Live) -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl p-5 border border-[#CED0D4] dark:border-[#3E4042] shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="font-extrabold text-lg">Live Property Status & Quick Boost Manager</h3>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Toggle houses between Available / Rented or boost any listing immediately</p>
+          </div>
+        </div>
+        <div id="landlord-manage-list" class="divide-y divide-gray-200 dark:divide-[#3E4042]">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- TAB 3: LOCAL BUSINESS ADS & HOME SERVICES DIRECTORY       -->
+    <!-- ========================================================= -->
+    <section id="tab-services" class="hidden space-y-6">
+
+      <!-- Header -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl p-5 sm:p-6 border border-[#CED0D4] dark:border-[#3E4042] shadow-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300">
+            SENANGA LOCAL ECOSYSTEM & B2B ADS
+          </span>
+          <h2 class="text-2xl font-extrabold mt-2">Senanga Home Services, Movers & Local Business Ads</h2>
+          <p class="text-sm text-gray-600 dark:text-[#B0B3B8] mt-1">
+            Connect with trusted Senanga plumbers, electricians, solar installers, and moving vans—or promote your business to thousands of local house-hunters.
+          </p>
+        </div>
+        <button onclick="openMoMoCheckout('Artisan / Service Directory Listing (Monthly)', 75, 'ad_artisan')" class="px-5 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-sm shadow-md shrink-0">
+          + List Your Business (From K75/mo)
+        </button>
+      </div>
+
+      <!-- Trusted Senanga Artisans & Moving Partners Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="services-grid">
+        <!-- Populated via JS -->
+      </div>
+
+      <!-- 3. Local Business Ads & Service Directory Pricing Table -->
+      <div class="bg-white dark:bg-[#242526] rounded-2xl border border-[#CED0D4] dark:border-[#3E4042] shadow-sm overflow-hidden">
+        <div class="px-5 py-4 bg-purple-50/70 dark:bg-[#2D2E30] border-b border-[#CED0D4] dark:border-[#3E4042] flex items-center justify-between">
+          <div>
+            <h3 class="font-extrabold text-lg text-purple-700 dark:text-purple-400">3. Local Business Ads & Service Directory Pricing (ZMW)</h3>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Reach tenants right when they move into a new house or shop in Senanga</p>
+          </div>
+          <span class="text-xl">📢</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-gray-200 dark:border-[#3E4042] text-xs uppercase text-gray-500 dark:text-[#B0B3B8] bg-gray-50 dark:bg-[#1E1F20]">
+                <th class="py-3 px-4">Ad / Directory Tier</th>
+                <th class="py-3 px-4">Price (ZMW)</th>
+                <th class="py-3 px-4">Billing Cycle</th>
+                <th class="py-3 px-4">Placement & Value</th>
+                <th class="py-3 px-4 text-right">Book Slot</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 dark:divide-[#3E4042]">
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Artisan / Service Directory</td>
+                <td class="py-3.5 px-4 font-extrabold text-purple-600 dark:text-purple-400">K75</td>
+                <td class="py-3.5 px-4 text-xs">Per month</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Plumbers, electricians, carpenters, painters listed with click-to-call & WhatsApp buttons.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Artisan / Service Directory (Monthly)', 75, 'ad_artisan')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs">Book K75/mo</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Moving & Transport Partner</td>
+                <td class="py-3.5 px-4 font-extrabold text-purple-600 dark:text-purple-400">K120</td>
+                <td class="py-3.5 px-4 text-xs">Per month (or 10%/job)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Canter, van & truck operators featured in "Book Moving Transport" buttons on property pages.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Moving & Transport Partner (Monthly)', 120, 'ad_transport')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs">Book K120/mo</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Category Sponsor Banner</td>
+                <td class="py-3.5 px-4 font-extrabold text-purple-600 dark:text-purple-400">K250</td>
+                <td class="py-3.5 px-4 text-xs">Per month</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Solar dealers, hardware shops, ISPs displayed in residential & commercial search feeds.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Category Sponsor Banner (Monthly)', 250, 'ad_banner')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs">Book K250/mo</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold">Homepage Hero Partner</td>
+                <td class="py-3.5 px-4 font-extrabold text-purple-600 dark:text-purple-400">K450</td>
+                <td class="py-3.5 px-4 text-xs">Per month (Max 2 slots)</td>
+                <td class="py-3.5 px-4 text-xs sm:text-sm">Top homepage banner + featured mention in Senanga WhatsApp property updates.</td>
+                <td class="py-3.5 px-4 text-right">
+                  <button onclick="openMoMoCheckout('Homepage Hero Partner (Monthly)', 450, 'ad_hero')" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs">Book K450/mo</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-[#242526] border-t border-[#CED0D4] dark:border-[#3E4042] mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <svg class="w-10 h-10"><use href="#kwahae-logo"></use></svg>
+        <div>
+          <p class="font-extrabold text-sm text-[#1877F2]">KWAHAE ESTATE SERVICES</p>
+          <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Senanga District, Western Province, Zambia • Free for Tenants</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-4 text-xs font-semibold text-gray-600 dark:text-[#B0B3B8]">
+        <button onclick="switchTab('browse')" class="hover:text-[#1877F2]">Browse Houses</button>
+        <button onclick="switchTab('landlord')" class="hover:text-[#1877F2]">Landlord Pricing (ZMW)</button>
+        <button onclick="switchTab('services')" class="hover:text-[#1877F2]">Home Services & Ads</button>
+        <button onclick="openVirtualTourModal('General Senanga Relocation')" class="hover:text-[#1877F2]">Relocation Virtual Tour</button>
+      </div>
+      <p class="text-xs text-gray-400">© 2026 KWAHAE ESTATE SERVICES. Built for Senanga.</p>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 1: PROPERTY DETAILS + WHATSAPP & CALL LEAD ROUTING  -->
+  <!-- ========================================================= -->
+  <div id="detail-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div class="bg-white dark:bg-[#242526] w-full max-w-2xl rounded-2xl shadow-2xl border border-[#CED0D4] dark:border-[#3E4042] overflow-hidden my-auto">
+      <div id="detail-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 2: POST NEW PROPERTY (LANDLORD FLOW)                -->
+  <!-- ========================================================= -->
+  <div id="post-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div class="bg-white dark:bg-[#242526] w-full max-w-xl rounded-2xl shadow-2xl border border-[#CED0D4] dark:border-[#3E4042] overflow-hidden my-auto">
+      <div class="px-5 py-4 bg-[#1877F2] text-white flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <svg class="w-7 h-7 bg-white rounded-full p-0.5"><use href="#kwahae-logo"></use></svg>
+          <h3 class="font-extrabold text-base sm:text-lg">Post a Property in Senanga</h3>
+        </div>
+        <button onclick="closeModal('post-modal')" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center font-bold">✕</button>
+      </div>
+      <form onsubmit="submitNewProperty(event)" class="p-5 space-y-4 text-sm">
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Property Title *</label>
+          <input id="post-title" required type="text" placeholder="e.g. Neat 2-Bedroom House with Borehole near Hospital"
+            class="w-full px-3.5 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none focus:ring-2 focus:ring-[#1877F2]" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Senanga Area *</label>
+            <select id="post-area" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none">
+              <option value="Town Centre / Boma">Town Centre / Boma</option>
+              <option value="Mongu Road">Mongu Road</option>
+              <option value="Kataba">Kataba</option>
+              <option value="Hospital Area">Hospital Area</option>
+              <option value="Namushakende Road">Namushakende Road</option>
+              <option value="Secondary School Area">Secondary School Area</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Property Type *</label>
+            <select id="post-type" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none">
+              <option value="Single Room / Bedsitter">Single Room / Bedsitter</option>
+              <option value="1–3 Bedroom House">1–3 Bedroom House</option>
+              <option value="Boarding House">Boarding House</option>
+              <option value="Commercial Shop / Office">Commercial Shop / Office</option>
+              <option value="Plot / Land">Plot / Land</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Monthly Rent (ZMW) *</label>
+            <input id="post-rent" required type="number" min="100" step="50" placeholder="e.g. 1500"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none focus:ring-2 focus:ring-[#1877F2]" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Advance / Deposit Terms</label>
+            <select id="post-terms" class="w-full px-3 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none">
+              <option value="1 Month Rent Only">1 Month Rent Only</option>
+              <option value="2 Months Advance">2 Months Advance</option>
+              <option value="3 Months Advance">3 Months Advance</option>
+              <option value="1 Month + Security Deposit">1 Month + Security Deposit</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Landlord / Caretaker Name *</label>
+            <input id="post-landlord" required type="text" placeholder="e.g. Mr. M. Mubita"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">WhatsApp / Phone (+260) *</label>
+            <input id="post-phone" required type="text" value="+26097" placeholder="+260977123456"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1.5">Utilities & Amenities</label>
+          <div class="flex flex-wrap gap-2">
+            <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F0F2F5] dark:bg-[#3A3B3C] cursor-pointer text-xs font-semibold">
+              <input type="checkbox" name="post-amenity" value="Borehole / Water" checked class="accent-[#1877F2]"> 💧 Borehole / Water
+            </label>
+            <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F0F2F5] dark:bg-[#3A3B3C] cursor-pointer text-xs font-semibold">
+              <input type="checkbox" name="post-amenity" value="ZESCO / Solar" checked class="accent-[#1877F2]"> ⚡ ZESCO / Solar
+            </label>
+            <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F0F2F5] dark:bg-[#3A3B3C] cursor-pointer text-xs font-semibold">
+              <input type="checkbox" name="post-amenity" value="Fenced Yard" class="accent-[#1877F2]"> 🧱 Fenced Yard
+            </label>
+            <label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#F0F2F5] dark:bg-[#3A3B3C] cursor-pointer text-xs font-semibold">
+              <input type="checkbox" name="post-amenity" value="Parking" class="accent-[#1877F2]"> 🚗 Parking
+            </label>
+          </div>
+        </div>
+
+        <!-- Optional Boost / Verification Selector -->
+        <div class="p-3.5 rounded-xl bg-blue-50 dark:bg-[#1E293B] border border-blue-200 dark:border-blue-800">
+          <label class="block text-xs font-extrabold text-[#1877F2] uppercase mb-1">Optional Visibility Boost / Verification</label>
+          <select id="post-boost" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-[#242526] border border-blue-200 dark:border-blue-700 text-xs sm:text-sm font-semibold outline-none">
+            <option value="free|0">Standard Free Listing — K0 (Free Forever)</option>
+            <option value="urgent|35">Urgent Bump (Top Refresh for 7 Days) — K35</option>
+            <option value="featured|85">Featured Homepage Spotlight (14 Days) — K85</option>
+            <option value="site_verified|140">Physical Inspection + Site Verified Badge — K140</option>
+            <option value="bundle|195">Combo: Site Inspection + Featured Spotlight — K195 (Save K30)</option>
+          </select>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2">
+          <button type="button" onclick="closeModal('post-modal')" class="px-4 py-2.5 rounded-xl bg-gray-200 dark:bg-[#3A3B3C] font-bold text-xs sm:text-sm">Cancel</button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-[#1877F2] hover:bg-[#166FE5] text-white font-bold text-xs sm:text-sm shadow">
+            Publish Property Now
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 3: ZAMBIAN MOBILE MONEY CHECKOUT (AIRTEL/MTN/ZAMTEL)-->
+  <!-- ========================================================= -->
+  <div id="momo-modal" class="fixed inset-0 z-50 hidden bg-black/65 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div class="bg-white dark:bg-[#242526] w-full max-w-md rounded-2xl shadow-2xl border border-[#CED0D4] dark:border-[#3E4042] overflow-hidden my-auto">
+      <div class="px-5 py-4 bg-gradient-to-r from-[#1877F2] to-[#0D5AC1] text-white flex items-center justify-between">
+        <div>
+          <p class="text-[11px] uppercase font-bold text-blue-100">KWAHAE Mobile Money Checkout</p>
+          <h3 id="momo-item-title" class="font-extrabold text-base">Featured Spotlight</h3>
+        </div>
+        <button onclick="closeModal('momo-modal')" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center font-bold">✕</button>
+      </div>
+
+      <div id="momo-body" class="p-5 space-y-4">
+        <!-- Amount Display -->
+        <div class="p-3.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] flex items-center justify-between">
+          <span class="text-xs font-bold text-gray-500 dark:text-[#B0B3B8] uppercase">Total Amount Due</span>
+          <span id="momo-amount" class="text-2xl font-extrabold text-[#1877F2]">K85.00</span>
+        </div>
+
+        <!-- Target Property Selector (if applicable) -->
+        <div id="momo-property-select-wrap">
+          <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Apply To Property</label>
+          <select id="momo-target-property" class="w-full px-3 py-2 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] text-xs sm:text-sm font-semibold outline-none">
+          </select>
+        </div>
+
+        <!-- Select Zambian Network -->
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-2">Choose Mobile Money Network</label>
+          <div class="grid grid-cols-3 gap-2">
+            <button type="button" onclick="selectOperator('Airtel Money')" id="op-Airtel Money" class="op-btn p-2.5 rounded-xl border-2 border-red-500 bg-red-50 dark:bg-red-950/40 text-center">
+              <div class="w-6 h-6 rounded-full bg-red-600 text-white font-extrabold text-xs flex items-center justify-center mx-auto mb-1">A</div>
+              <span class="text-xs font-extrabold text-red-700 dark:text-red-300">Airtel Money</span>
+            </button>
+            <button type="button" onclick="selectOperator('MTN MoMo')" id="op-MTN MoMo" class="op-btn p-2.5 rounded-xl border border-gray-300 dark:border-[#4E4F50] text-center">
+              <div class="w-6 h-6 rounded-full bg-yellow-400 text-black font-extrabold text-xs flex items-center justify-center mx-auto mb-1">M</div>
+              <span class="text-xs font-extrabold">MTN MoMo</span>
+            </button>
+            <button type="button" onclick="selectOperator('Zamtel Kwacha')" id="op-Zamtel Kwacha" class="op-btn p-2.5 rounded-xl border border-gray-300 dark:border-[#4E4F50] text-center">
+              <div class="w-6 h-6 rounded-full bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center mx-auto mb-1">Z</div>
+              <span class="text-xs font-extrabold">Zamtel</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Zambian Mobile Number -->
+        <div>
+          <label class="block text-xs font-bold uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Zambian Mobile Number (+260)</label>
+          <input id="momo-phone" type="tel" value="+260977123456" placeholder="+26097XXXXXXX"
+            class="w-full px-3.5 py-2.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] font-bold text-sm outline-none focus:ring-2 focus:ring-[#1877F2]" />
+          <p class="text-[11px] text-gray-500 dark:text-[#B0B3B8] mt-1">An instant USSD PIN prompt will be sent to your handset.</p>
+        </div>
+
+        <!-- Manual Transaction ID Fallback Toggle -->
+        <details class="text-xs bg-gray-50 dark:bg-[#1E1F20] p-3 rounded-xl border border-gray-200 dark:border-[#3E4042]">
+          <summary class="font-bold cursor-pointer text-[#1877F2]">Network slow? Use Manual Transaction ID Fallback</summary>
+          <div class="mt-2 space-y-2 text-gray-600 dark:text-[#B0B3B8]">
+            <p>Send <strong id="momo-fallback-amt">K85</strong> to KWAHAE Merchant Wallet: <strong>0977-889900 (KwahaE Estates)</strong>, then enter your SMS Transaction ID below:</p>
+            <input id="momo-tx-id" type="text" placeholder="e.g. MP261119.1620.A9821" class="w-full px-3 py-2 rounded-lg bg-white dark:bg-[#242526] border border-gray-300 dark:border-[#4E4F50] outline-none" />
+          </div>
+        </details>
+
+        <button onclick="processMoMoPayment()" class="w-full py-3 rounded-xl bg-[#42B72A] hover:bg-[#36A420] text-white font-extrabold text-sm shadow-md">
+          Send PIN Prompt & Pay Now
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- MODAL 4: SAVED HOUSES SHORTLIST (LOCALSTORAGE)            -->
+  <!-- ========================================================= -->
+  <div id="saved-modal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+    <div class="bg-white dark:bg-[#242526] w-full max-w-xl rounded-2xl shadow-2xl border border-[#CED0D4] dark:border-[#3E4042] overflow-hidden my-auto">
+      <div class="px-5 py-4 bg-[#1877F2] text-white flex items-center justify-between">
+        <h3 class="font-extrabold text-base">❤️ Your Saved Houses in Senanga (Free Shortlist)</h3>
+        <button onclick="closeModal('saved-modal')" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center font-bold">✕</button>
+      </div>
+      <div id="saved-list-body" class="p-5 max-h-[70vh] overflow-y-auto space-y-3">
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden max-w-sm bg-[#242526] text-white px-4 py-3 rounded-xl shadow-xl border border-gray-700 text-xs sm:text-sm font-semibold flex items-center gap-2.5">
+    <span class="w-2.5 h-2.5 rounded-full bg-[#42B72A] shrink-0"></span>
+    <span id="toast-msg">Action completed!</span>
+  </div>
+
+  <script>
+    // =========================================================
+    // 1. INITIAL SENANGA DISTRICT PROPERTY DATA
+    // =========================================================
+    const DEFAULT_PROPERTIES = [
+      {
+        id: 'prop-1',
+        title: 'Executive 3-Bedroom Fenced House with Borehole & Solar',
+        area: 'Hospital Area',
+        type: '1–3 Bedroom House',
+        rent: 2800,
+        terms: '2 Months Advance',
+        status: 'Available',
+        boost: 'featured',
+        verification: 'site_verified',
+        landlord: 'Mr. K. Liswaniso',
+        phone: '+260977451290',
+        views: 142,
+        amenities: ['Borehole / Water', 'ZESCO / Solar', 'Fenced Yard', 'Parking'],
+        description: 'Spacious 3-bedroom family home 5 minutes from Senanga District Hospital. Reliable overhead water tank, solar inverter backup for load-shedding, tiled floors, and secure wall fence.',
+        gradient: 'from-blue-600 to-indigo-700',
+        icon: '🏡'
+      },
+      {
+        id: 'prop-2',
+        title: 'Prime Main Road Commercial Shop / Office Space',
+        area: 'Town Centre / Boma',
+        type: 'Commercial Shop / Office',
+        rent: 3500,
+        terms: '3 Months Advance',
+        status: 'Available',
+        boost: 'featured',
+        verification: 'site_verified',
+        landlord: 'Mrs. N. Sitali',
+        phone: '+260966882310',
+        views: 198,
+        amenities: ['ZESCO / Solar', 'Parking'],
+        description: 'High-foot-traffic retail shop right in Senanga Boma near main bus stop and banks. Heavy-duty security burglar bars, prepaid ZESCO meter, and front customer parking.',
+        gradient: 'from-amber-500 to-orange-600',
+        icon: '🏪'
+      },
+      {
+        id: 'prop-3',
+        title: 'Modern 2-Bedroom Semi-Detached Flat (Newly Painted)',
+        area: 'Mongu Road',
+        type: '1–3 Bedroom House',
+        rent: 1800,
+        terms: '1 Month + Security Deposit',
+        status: 'Available',
+        boost: 'urgent',
+        verification: 'verified_owner',
+        landlord: 'Mr. B. Muyunda',
+        phone: '+260955320194',
+        views: 115,
+        amenities: ['Borehole / Water', 'ZESCO / Solar', 'Fenced Yard'],
+        description: 'Clean 2-bedroom flat along Mongu Road with modern kitchen units, indoor shower/toilet, constant borehole water, and easy minibus access to town.',
+        gradient: 'from-emerald-500 to-teal-700',
+        icon: '🏠'
+      },
+      {
+        id: 'prop-4',
+        title: 'Clean Self-Contained Bedsitter / Single Room for Workers',
+        area: 'Kataba',
+        type: 'Single Room / Bedsitter',
+        rent: 750,
+        terms: '1 Month Rent Only',
+        status: 'Available',
+        boost: 'urgent',
+        verification: 'site_verified',
+        landlord: 'Mr. C. Simasiku',
+        phone: '+260978661209',
+        views: 210,
+        amenities: ['Borehole / Water', 'ZESCO / Solar'],
+        description: 'Affordable self-contained bedsitter in quiet Kataba residential area. Private shower & toilet, borehole tap right outside, ideal for teachers, nurses, or single professionals.',
+        gradient: 'from-sky-500 to-blue-700',
+        icon: '🛏️'
+      },
+      {
+        id: 'prop-5',
+        title: 'Senanga Scholars Boarding House (Shared & Single Rooms)',
+        area: 'Secondary School Area',
+        type: 'Boarding House',
+        rent: 600,
+        terms: '1 Month Rent Only',
+        status: 'Available',
+        boost: 'none',
+        verification: 'verified_compound',
+        landlord: 'Mama M. Lubinda',
+        phone: '+260979112233',
+        views: 164,
+        amenities: ['Borehole / Water', 'ZESCO / Solar', 'Fenced Yard'],
+        description: 'Secure, audited boarding compound near Senanga Secondary School. Includes study tables, solar lighting in corridors, borehole water, and 24/7 caretaker.',
+        gradient: 'from-purple-600 to-indigo-800',
+        icon: '🏘️'
+      },
+      {
+        id: 'prop-6',
+        title: '1-Bedroom Cottage with Private Veranda & Garden',
+        area: 'Namushakende Road',
+        type: '1–3 Bedroom House',
+        rent: 1200,
+        terms: '1 Month Rent Only',
+        status: 'Available',
+        boost: 'none',
+        verification: 'verified_owner',
+        landlord: 'Mr. L. Mwanamwalye',
+        phone: '+260965447812',
+        views: 89,
+        amenities: ['Borehole / Water', 'ZESCO / Solar', 'Parking'],
+        description: 'Peaceful 1-bedroom cottage off Namushakende Road. Spacious living room, bedroom, kitchen nook, and shaded yard.',
+        gradient: 'from-teal-500 to-emerald-700',
+        icon: '🌿'
+      },
+      {
+        id: 'prop-7',
+        title: '30m x 25m Residential / Commercial Plot with Council Papers',
+        area: 'Mongu Road',
+        type: 'Plot / Land',
+        rent: 4500,
+        terms: '1 Month Rent Only',
+        status: 'Available',
+        boost: 'none',
+        verification: 'verified_owner',
+        landlord: 'Mr. P. Imasiku',
+        phone: '+260977903421',
+        views: 74,
+        amenities: ['Parking'],
+        description: 'Cleared dry land suitable for warehouse, hardware yard, or block-making business along Mongu Road corridor. ZESCO pole adjacent.',
+        gradient: 'from-stone-600 to-amber-800',
+        icon: '📐'
+      },
+      {
+        id: 'prop-8',
+        title: '2-Bedroom Teacher / Civil Servant House Near Boma',
+        area: 'Town Centre / Boma',
+        type: '1–3 Bedroom House',
+        rent: 1650,
+        terms: '1 Month + Security Deposit',
+        status: 'Rented',
+        boost: 'none',
+        verification: 'site_verified',
+        landlord: 'Mrs. E. Namukolo',
+        phone: '+260976554433',
+        views: 230,
+        amenities: ['Borehole / Water', 'ZESCO / Solar', 'Fenced Yard'],
+        description: 'Walking distance to District Commissioner offices and main market. Recently occupied—check other available listings!',
+        gradient: 'from-slate-500 to-slate-700',
+        icon: '🏠'
+      }
+    ];
+
+    const LOCAL_SERVICES = [
+      {
+        name: 'Senanga Quick-Move Canter & Van',
+        category: 'Moving & Transport Partner',
+        rate: 'From K150 / trip',
+        area: 'Boma, Mongu Rd & Kataba',
+        phone: '+260977334455',
+        badge: 'Verified Mover',
+        color: 'blue',
+        icon: '🚚',
+        desc: 'Reliable 3-ton Canter and pickup van for house moves, furniture delivery, and hardware transport anywhere in Senanga.'
+      },
+      {
+        name: 'Mulonga Plumbing & Borehole Repairs',
+        category: 'Artisan Directory',
+        rate: 'Call-out from K80',
+        area: 'All Senanga District',
+        phone: '+260966112299',
+        badge: 'Verified Plumber',
+        color: 'emerald',
+        icon: '🔧',
+        desc: 'Overhead tank installation, geyser fitting, pipe leak repairs, and borehole hand-pump servicing.'
+      },
+      {
+        name: 'BrightSpark ZESCO & Solar Wiring',
+        category: 'Artisan Directory',
+        rate: 'Quotes from K100',
+        area: 'Hospital Area & Town Centre',
+        phone: '+260978223344',
+        badge: 'Certified Electrician',
+        color: 'amber',
+        icon: '⚡',
+        desc: 'Inverter & solar battery setup, house re-wiring, security floodlights, and prepaid meter fault checks.'
+      },
+      {
+        name: 'Barotse Carpentry & Welding Works',
+        category: 'Artisan Directory',
+        rate: 'Custom Quotes',
+        area: 'Kataba Junction',
+        phone: '+260955778899',
+        badge: 'Verified Artisan',
+        color: 'purple',
+        icon: '🪚',
+        desc: 'Burglar bars, steel gates, kitchen cupboards, wardrobes, and door lock replacements for landlords & tenants.'
+      }
+    ];
+
+    // =========================================================
+    // 2. APPLICATION STATE & STORAGE
+    // =========================================================
+    let properties = JSON.parse(localStorage.getItem('kwahae_properties')) || DEFAULT_PROPERTIES;
+    let savedIds = JSON.parse(localStorage.getItem('kwahae_saved')) || [];
+    let activeAmenityFilters = new Set();
+    let currentMoMoState = {
+      title: '',
+      amount: 0,
+      code: '',
+      operator: 'Airtel Money',
+      targetPropId: ''
+    };
+
+    function saveState() {
+      localStorage.setItem('kwahae_properties', JSON.stringify(properties));
+      localStorage.setItem('kwahae_saved', JSON.stringify(savedIds));
+      updateSavedCounter();
+    }
+
+    // =========================================================
+    // 3. FACEBOOK-STYLE LIGHT / DARK MODE SWITCH
+    // =========================================================
+    function initTheme() {
+      const savedTheme = localStorage.getItem('kwahae_theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+      applyTheme(isDark);
+    }
+
+    function applyTheme(isDark) {
+      const html = document.documentElement;
+      const knob = document.getElementById('theme-knob');
+      if (isDark) {
+        html.classList.add('dark');
+        knob.style.transform = 'translateX(26px)';
+      } else {
+        html.classList.remove('dark');
+        knob.style.transform = 'translateX(0px)';
+      }
+      localStorage.setItem('kwahae_theme', isDark ? 'dark' : 'light');
+    }
+
+    function toggleTheme() {
+      const isDark = !document.documentElement.classList.contains('dark');
+      applyTheme(isDark);
+      showToast(isDark ? '🌙 Dark Mode enabled' : '☀️ Light Mode enabled');
+    }
+
+    // =========================================================
+    // 4. NAVIGATION TABS
+    // =========================================================
+    function switchTab(tabName) {
+      ['browse', 'landlord', 'services'].forEach(t => {
+        document.getElementById(`tab-${t}`).classList.add('hidden');
+        const deskBtn = document.getElementById(`nav-${t}`);
+        const mobBtn = document.getElementById(`mob-nav-${t}`);
+        if (deskBtn) {
+          deskBtn.classList.remove('border-[#1877F2]', 'text-[#1877F2]');
+          deskBtn.classList.add('border-transparent', 'text-gray-600', 'dark:text-[#B0B3B8]');
+        }
+        if (mobBtn) {
+          mobBtn.classList.remove('border-[#1877F2]', 'text-[#1877F2]', 'font-bold');
+          mobBtn.classList.add('border-transparent', 'text-gray-600', 'dark:text-[#B0B3B8]', 'font-semibold');
+        }
+      });
+
+      document.getElementById(`tab-${tabName}`).classList.remove('hidden');
+      const activeDesk = document.getElementById(`nav-${tabName}`);
+      const activeMob = document.getElementById(`mob-nav-${tabName}`);
+      if (activeDesk) {
+        activeDesk.classList.add('border-[#1877F2]', 'text-[#1877F2]');
+        activeDesk.classList.remove('border-transparent', 'text-gray-600', 'dark:text-[#B0B3B8]');
+      }
+      if (activeMob) {
+        activeMob.classList.add('border-[#1877F2]', 'text-[#1877F2]', 'font-bold');
+        activeMob.classList.remove('border-transparent', 'text-gray-600', 'dark:text-[#B0B3B8]', 'font-semibold');
+      }
+
+      if (tabName === 'landlord') renderLandlordManager();
+      if (tabName === 'services') renderServices();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // =========================================================
+    // 5. FILTERING & RENDERING PROPERTY FEED
+    // =========================================================
+    function toggleAmenityFilter(key) {
+      const btn = document.getElementById(`pill-${key}`);
+      if (activeAmenityFilters.has(key)) {
+        activeAmenityFilters.delete(key);
+        btn.classList.remove('bg-[#1877F2]', 'text-white');
+        btn.classList.add('bg-[#F0F2F5]', 'dark:bg-[#3A3B3C]');
+      } else {
+        activeAmenityFilters.add(key);
+        btn.classList.remove('bg-[#F0F2F5]', 'dark:bg-[#3A3B3C]');
+        btn.classList.add('bg-[#1877F2]', 'text-white');
+      }
+      renderProperties();
+    }
+
+    function resetFilters() {
+      document.getElementById('filter-search').value = '';
+      document.getElementById('filter-area').value = 'All';
+      document.getElementById('filter-type').value = 'All';
+      document.getElementById('filter-rent').value = '999999';
+      activeAmenityFilters.clear();
+      document.querySelectorAll('.amenity-pill').forEach(btn => {
+        btn.classList.remove('bg-[#1877F2]', 'text-white');
+        btn.classList.add('bg-[#F0F2F5]', 'dark:bg-[#3A3B3C]');
+      });
+      renderProperties();
+    }
+
+    function getVerificationBadgeHTML(v) {
+      if (v === 'site_verified') {
+        return `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">🛡️ Site Verified</span>`;
+      }
+      if (v === 'verified_compound') {
+        return `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-100 text-teal-800 dark:bg-teal-900/60 dark:text-teal-300">🏘️ Verified Compound</span>`;
+      }
+      if (v === 'verified_owner') {
+        return `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-100 text-blue-800 dark:bg-blue-900/60 dark:text-blue-300">✅ Verified Owner</span>`;
+      }
+      return '';
+    }
+
+    function renderProperties() {
+      const search = document.getElementById('filter-search').value.toLowerCase().trim();
+      const area = document.getElementById('filter-area').value;
+      const type = document.getElementById('filter-type').value;
+      const maxRent = Number(document.getElementById('filter-rent').value);
+      const sortOrder = document.getElementById('sort-order').value;
+
+      let filtered = properties.filter(p => {
+        if (area !== 'All' && p.area !== area) return false;
+        if (type !== 'All' && p.type !== type) return false;
+        if (p.rent > maxRent) return false;
+        if (search && !(`${p.title} ${p.area} ${p.type} ${p.description}`.toLowerCase().includes(search))) return false;
+
+        if (activeAmenityFilters.has('Verified') && p.verification === 'none') return false;
+        if (activeAmenityFilters.has('AvailableOnly') && p.status !== 'Available') return false;
+        for (const f of activeAmenityFilters) {
+          if (f !== 'Verified' && f !== 'AvailableOnly' && !p.amenities.includes(f)) return false;
+        }
+        return true;
+      });
+
+      // Sort
+      const boostRank = { featured: 3, urgent: 2, none: 1 };
+      filtered.sort((a, b) => {
+        if (sortOrder === 'price-asc') return a.rent - b.rent;
+        if (sortOrder === 'price-desc') return b.rent - a.rent;
+        // Default: Available first, then Featured/Urgent
+        if (a.status !== b.status) return a.status === 'Available' ? -1 : 1;
+        return (boostRank[b.boost] || 1) - (boostRank[a.boost] || 1);
+      });
+
+      document.getElementById('results-count').textContent = filtered.length;
+      const grid = document.getElementById('properties-grid');
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full bg-white dark:bg-[#242526] rounded-2xl p-10 text-center border border-[#CED0D4] dark:border-[#3E4042]">
+            <p class="text-3xl mb-2">🔍</p>
+            <h3 class="font-extrabold text-lg">No Senanga properties matched those filters</h3>
+            <p class="text-sm text-gray-500 dark:text-[#B0B3B8] mt-1">Try increasing your max ZMW rent or resetting your filters.</p>
+            <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-xl bg-[#1877F2] text-white font-bold text-sm">Reset Filters</button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(p => {
+        const isSaved = savedIds.includes(p.id);
+        const isFeatured = p.boost === 'featured';
+        const isUrgent = p.boost === 'urgent';
+        const isRented = p.status === 'Rented';
+
+        return `
+          <article class="bg-white dark:bg-[#242526] rounded-2xl border ${isFeatured ? 'border-amber-400 ring-2 ring-amber-400/30' : 'border-[#CED0D4] dark:border-[#3E4042]'} shadow-sm hover:shadow-md transition-all flex flex-col overflow-hidden ${isRented ? 'opacity-80' : ''}">
+            
+            <!-- Architectural SVG/Gradient Card Header -->
+            <div onclick="openPropertyDetail('${p.id}')" class="relative h-44 bg-gradient-to-br ${p.gradient} p-4 flex flex-col justify-between cursor-pointer select-none overflow-hidden">
+              <!-- Subtle Architectural Line Art Overlay -->
+              <svg class="absolute right-2 bottom-0 w-36 h-36 text-white/15 pointer-events-none" viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 65 L60 25 L105 65 V110 H15 Z" />
+                <rect x="48" y="75" width="24" height="35" />
+                <rect x="26" y="72" width="14" height="14" />
+                <rect x="80" y="72" width="14" height="14" />
+              </svg>
+
+              <!-- Top Badges Row -->
+              <div class="flex items-start justify-between gap-2 z-10">
+                <div class="flex flex-wrap gap-1.5">
+                  ${isFeatured ? `<span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-amber-400 text-black shadow-xs">⭐ Featured Spotlight</span>` : ''}
+                  ${isUrgent ? `<span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-orange-500 text-white shadow-xs">🔥 Urgent</span>` : ''}
+                  <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold ${isRented ? 'bg-red-600 text-white' : 'bg-[#42B72A] text-white'}">
+                    ${isRented ? 'Occupied / Rented' : 'Available'}
+                  </span>
+                </div>
+
+                <!-- Save / Heart Button -->
+                <button onclick="event.stopPropagation(); toggleSaveProperty('${p.id}')" title="Save to Shortlist"
+                  class="w-9 h-9 rounded-full bg-black/35 hover:bg-black/55 backdrop-blur-xs flex items-center justify-center text-white">
+                  <svg class="w-5 h-5 ${isSaved ? 'text-rose-500 fill-current' : 'text-white'}" fill="${isSaved ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Bottom Price & Area Overlay -->
+              <div class="z-10 flex items-end justify-between text-white">
+                <div>
+                  <span class="inline-block px-2 py-0.5 rounded-md bg-black/35 text-[11px] font-semibold mb-1">📍 ${p.area}</span>
+                  <div class="text-2xl font-extrabold leading-none">
+                    K${p.rent.toLocaleString()}<span class="text-xs font-normal text-white/85">/month</span>
+                  </div>
+                </div>
+                <span class="text-3xl bg-white/15 backdrop-blur-xs w-11 h-11 rounded-xl flex items-center justify-center">${p.icon}</span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-1.5">
+                  <span class="text-[11px] font-bold uppercase tracking-wide text-[#1877F2]">${p.type}</span>
+                  ${getVerificationBadgeHTML(p.verification)}
+                </div>
+
+                <h3 onclick="openPropertyDetail('${p.id}')" class="font-extrabold text-base leading-snug hover:text-[#1877F2] cursor-pointer line-clamp-2">
+                  ${p.title}
+                </h3>
+
+                <p class="text-xs text-gray-500 dark:text-[#B0B3B8] mt-1">
+                  Terms: <strong class="text-gray-700 dark:text-gray-300">${p.terms}</strong> • 👁️ ${p.views} views
+                </p>
+
+                <!-- Amenities Pills -->
+                <div class="flex flex-wrap gap-1.5 mt-2.5">
+                  ${p.amenities.map(a => `<span class="px-2 py-0.5 rounded-md bg-[#F0F2F5] dark:bg-[#3A3B3C] text-[11px] font-medium">${a}</span>`).join('')}
+                </div>
+              </div>
+
+              <!-- WhatsApp & Call Lead Routing Buttons -->
+              <div class="pt-3 border-t border-gray-200 dark:border-[#3E4042] space-y-2">
+                <div class="grid grid-cols-2 gap-2">
+                  <button onclick="triggerWhatsApp('${p.title.replace(/'/g, "\\'")}', '${p.phone}', 'Hello ${p.landlord}, I saw your ${p.type} in ${p.area} (K${p.rent.toLocaleString()}/mo) on KWAHAE ESTATE SERVICES. Is it still available for viewing?')"
+                    class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-xs">
+                    <span>💬 WhatsApp</span>
+                  </button>
+                  <a href="tel:${p.phone}" onclick="showToast('Calling ${p.landlord} (${p.phone})...')"
+                    class="py-2.5 px-3 rounded-xl bg-[#E7F3FF] hover:bg-[#DBE7F2] dark:bg-[#3A3B3C] dark:hover:bg-[#4E4F50] text-[#1877F2] dark:text-[#2D88FF] font-bold text-xs flex items-center justify-center gap-1.5">
+                    <span>📞 Call Landlord</span>
+                  </a>
+                </div>
+                <button onclick="openPropertyDetail('${p.id}')" class="w-full py-1.5 text-center text-xs font-semibold text-gray-500 dark:text-[#B0B3B8] hover:text-[#1877F2]">
+                  View Full Details & Book Virtual Tour →
+                </button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    // =========================================================
+    // 6. PROPERTY DETAIL MODAL & VIRTUAL TOUR
+    // =========================================================
+    function openPropertyDetail(propId) {
+      const p = properties.find(item => item.id === propId);
+      if (!p) return;
+
+      // Increment view count
+      p.views += 1;
+      saveState();
+
+      const waText = `Hello ${p.landlord}, I saw your ${p.type} in ${p.area} (K${p.rent.toLocaleString()}/mo) on KWAHAE ESTATE SERVICES. Is it still available for viewing?`;
+      const shareText = `Check out this ${p.type} in ${p.area}, Senanga for K${p.rent.toLocaleString()}/month on KWAHAE ESTATE SERVICES!`;
+
+      document.getElementById('detail-modal-content').innerHTML = `
+        <div class="bg-gradient-to-r ${p.gradient} text-white p-5 sm:p-6 relative">
+          <button onclick="closeModal('detail-modal')" class="absolute right-4 top-4 w-9 h-9 rounded-full bg-black/30 hover:bg-black/50 flex items-center justify-center font-bold">✕</button>
+          <div class="flex flex-wrap gap-2 mb-2">
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-black/30">📍 ${p.area}, Senanga</span>
+            <span class="px-2.5 py-0.5 rounded-full text-xs font-bold ${p.status === 'Available' ? 'bg-[#42B72A]' : 'bg-red-600'}">${p.status}</span>
+          </div>
+          <h2 class="text-xl sm:text-2xl font-extrabold pr-8">${p.title}</h2>
+          <p class="text-2xl sm:text-3xl font-extrabold mt-2">K${p.rent.toLocaleString()} <span class="text-sm font-normal text-white/85">/ month (${p.terms})</span></p>
+        </div>
+
+        <div class="p-5 sm:p-6 space-y-4 text-sm">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-gray-200 dark:border-[#3E4042]">
+            <div>
+              <p class="text-xs text-gray-500 dark:text-[#B0B3B8]">Listed by Landlord / Caretaker</p>
+              <p class="font-extrabold text-base">${p.landlord} <span class="text-xs font-normal text-gray-500">(${p.phone})</span></p>
+            </div>
+            ${getVerificationBadgeHTML(p.verification) || '<span class="text-xs text-gray-400">Standard Listing</span>'}
+          </div>
+
+          <div>
+            <h4 class="font-bold text-xs uppercase text-gray-500 dark:text-[#B0B3B8] mb-1">Property Description</h4>
+            <p class="leading-relaxed text-gray-700 dark:text-gray-300">${p.description}</p>
+          </div>
+
+          <div>
+            <h4 class="font-bold text-xs uppercase text-gray-500 dark:text-[#B0B3B8] mb-2">Included Amenities</h4>
+            <div class="flex flex-wrap gap-2">
+              ${p.amenities.map(a => `<span class="px-3 py-1 rounded-full bg-[#F0F2F5] dark:bg-[#3A3B3C] text-xs font-semibold">✓ ${a}</span>`).join('')}
+            </div>
+          </div>
+
+          <!-- Out-of-Town Civil Servant Virtual Inspection CTA -->
+          <div class="p-3.5 rounded-xl bg-blue-50 dark:bg-[#1E293B] border border-blue-200 dark:border-blue-800 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <p class="font-extrabold text-xs text-[#1877F2] uppercase">Transferred to Senanga? Out of Town?</p>
+              <p class="text-xs text-gray-600 dark:text-[#B0B3B8]">Book a live KWAHAE WhatsApp video inspection & hold reservation before you travel.</p>
+            </div>
+            <button onclick="closeModal('detail-modal'); openVirtualTourModal('${p.title.replace(/'/g, "\\'")}')" class="px-3.5 py-2 rounded-xl bg-[#1877F2] text-white font-bold text-xs shrink-0">
+              📹 Book Video Tour (K150)
+            </button>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-2">
+            <button onclick="triggerWhatsApp('${p.title.replace(/'/g, "\\'")}', '${p.phone}', '${waText.replace(/'/g, "\\'")}')"
+              class="py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow">
+              💬 Chat on WhatsApp
+            </button>
+            <a href="tel:${p.phone}" class="py-3 px-4 rounded-xl bg-[#1877F2] hover:bg-[#166FE5] text-white font-extrabold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow">
+              📞 Call Now
+            </a>
+            <button onclick="triggerWhatsApp('Share Listing', '', '${shareText.replace(/'/g, "\\'")}')"
+              class="py-3 px-4 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] hover:bg-gray-200 dark:hover:bg-[#4E4F50] font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5">
+              📤 Share to WhatsApp
+            </button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('detail-modal').classList.remove('hidden');
+      renderProperties();
+    }
+
+    function openVirtualTourModal(propertyName) {
+      openMoMoCheckout(`Virtual WhatsApp Video Tour & Hold (${propertyName})`, 150, 'virtual_tour');
+    }
+
+    // =========================================================
+    // 7. SAVED HOUSES SHORTLIST
+    // =========================================================
+    function toggleSaveProperty(propId) {
+      if (savedIds.includes(propId)) {
+        savedIds = savedIds.filter(id => id !== propId);
+        showToast('Removed from Saved Houses');
+      } else {
+        savedIds.push(propId);
+        showToast('❤️ Saved to your Senanga shortlist!');
+      }
+      saveState();
+      renderProperties();
+    }
+
+    function updateSavedCounter() {
+      document.getElementById('saved-count').textContent = savedIds.length;
+    }
+
+    function openSavedModal() {
+      const container = document.getElementById('saved-list-body');
+      const savedProps = properties.filter(p => savedIds.includes(p.id));
+
+      if (savedProps.length === 0) {
+        container.innerHTML = `
+          <div class="text-center py-8">
+            <p class="text-3xl mb-2">❤️</p>
+            <p class="font-bold">No saved houses yet</p>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8] mt-1">Tap the heart icon on any Senanga property to compare prices without creating an account.</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = savedProps.map(p => `
+          <div class="p-3.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] flex items-center justify-between gap-3">
+            <div>
+              <p class="font-extrabold text-sm">${p.title}</p>
+              <p class="text-xs text-gray-600 dark:text-[#B0B3B8]">📍 ${p.area} • <strong class="text-[#1877F2]">K${p.rent.toLocaleString()}/mo</strong></p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button onclick="closeModal('saved-modal'); openPropertyDetail('${p.id}')" class="px-3 py-1.5 rounded-lg bg-[#1877F2] text-white text-xs font-bold">Open</button>
+              <button onclick="toggleSaveProperty('${p.id}'); openSavedModal()" class="px-2.5 py-1.5 rounded-lg bg-red-100 text-red-700 text-xs font-bold">✕</button>
+            </div>
+          </div>
+        `).join('');
+      }
+      document.getElementById('saved-modal').classList.remove('hidden');
+    }
+
+    // =========================================================
+    // 8. POST NEW PROPERTY & LANDLORD MANAGER
+    // =========================================================
+    function openPostModal() {
+      document.getElementById('post-modal').classList.remove('hidden');
+    }
+
+    function submitNewProperty(e) {
+      e.preventDefault();
+      const title = document.getElementById('post-title').value.trim();
+      const area = document.getElementById('post-area').value;
+      const type = document.getElementById('post-type').value;
+      const rent = Number(document.getElementById('post-rent').value);
+      const terms = document.getElementById('post-terms').value;
+      const landlord = document.getElementById('post-landlord').value.trim();
+      const phone = document.getElementById('post-phone').value.trim();
+      const boostRaw = document.getElementById('post-boost').value.split('|');
+      const boostCode = boostRaw[0];
+      const boostCost = Number(boostRaw[1]);
+
+      const amenities = Array.from(document.querySelectorAll('input[name="post-amenity"]:checked')).map(cb => cb.value);
+
+      const newId = 'prop-' + Date.now();
+      const newProp = {
+        id: newId,
+        title,
+        area,
+        type,
+        rent,
+        terms,
+        status: 'Available',
+        boost: 'none',
+        verification: 'none',
+        landlord,
+        phone,
+        views: 1,
+        amenities: amenities.length ? amenities : ['ZESCO / Solar'],
+        description: `Newly listed ${type} in ${area}, Senanga. Contact ${landlord} directly on WhatsApp or phone for immediate viewing.`,
+        gradient: 'from-[#1877F2] to-blue-800',
+        icon: '🏠'
+      };
+
+      properties.unshift(newProp);
+      saveState();
+      renderProperties();
+      closeModal('post-modal');
+      e.target.reset();
+
+      if (boostCost > 0) {
+        openMoMoCheckout(`Activate ${boostCode.replace('_', ' ').toUpperCase()} for "${title}"`, boostCost, boostCode, newId);
+      } else {
+        showToast('🎉 Property published FREE in Senanga feed!');
+      }
+    }
+
+    function renderLandlordManager() {
+      const container = document.getElementById('landlord-manage-list');
+      container.innerHTML = properties.map(p => `
+        <div class="py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="font-bold text-sm">${p.title}</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${p.status === 'Available' ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}">${p.status}</span>
+              ${p.boost === 'featured' ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-800">⭐ Featured</span>' : ''}
+              ${p.boost === 'urgent' ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-orange-100 text-orange-800">🔥 Urgent</span>' : ''}
+              ${getVerificationBadgeHTML(p.verification)}
+            </div>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8] mt-0.5">📍 ${p.area} • K${p.rent.toLocaleString()}/mo • Landlord: ${p.landlord}</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 shrink-0">
+            <button onclick="togglePropertyStatus('${p.id}')" class="px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-[#3A3B3C] hover:bg-gray-200 text-xs font-bold">
+              Switch to ${p.status === 'Available' ? 'Rented' : 'Available'}
+            </button>
+            <button onclick="openMoMoCheckout('Urgent Bump (7 Days)', 35, 'urgent', '${p.id}')" class="px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 font-bold text-xs">
+              Boost K35
+            </button>
+            <button onclick="openMoMoCheckout('Site Verification + Photos', 140, 'site_verified', '${p.id}')" class="px-3 py-1.5 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs">
+              Verify K140
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function togglePropertyStatus(propId) {
+      const p = properties.find(item => item.id === propId);
+      if (!p) return;
+      p.status = p.status === 'Available' ? 'Rented' : 'Available';
+      saveState();
+      renderLandlordManager();
+      renderProperties();
+      showToast(`Marked "${p.title}" as ${p.status}`);
+    }
+
+    // =========================================================
+    // 9. LOCAL SERVICES DIRECTORY RENDER
+    // =========================================================
+    function renderServices() {
+      const grid = document.getElementById('services-grid');
+      grid.innerHTML = LOCAL_SERVICES.map(s => `
+        <div class="bg-white dark:bg-[#242526] rounded-2xl p-5 border border-[#CED0D4] dark:border-[#3E4042] shadow-sm flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-start justify-between gap-2">
+              <div class="w-12 h-12 rounded-2xl bg-blue-50 dark:bg-[#3A3B3C] flex items-center justify-center text-2xl">${s.icon}</div>
+              <span class="px-2.5 py-1 rounded-full text-[11px] font-extrabold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">✅ ${s.badge}</span>
+            </div>
+            <h3 class="font-extrabold text-base mt-3">${s.name}</h3>
+            <p class="text-xs font-bold text-[#1877F2]">${s.category} • ${s.rate}</p>
+            <p class="text-xs text-gray-500 dark:text-[#B0B3B8] mt-1">📍 Service Area: ${s.area}</p>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-2.5 leading-relaxed">${s.desc}</p>
+          </div>
+          <div class="grid grid-cols-2 gap-2 pt-3 border-t border-gray-200 dark:border-[#3E4042]">
+            <button onclick="triggerWhatsApp('${s.name}', '${s.phone}', 'Hello ${s.name}, I found your service on KWAHAE ESTATE SERVICES Senanga and would like to book/inquire.')"
+              class="py-2.5 px-3 rounded-xl bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold text-xs">
+              💬 WhatsApp
+            </button>
+            <a href="tel:${s.phone}" class="py-2.5 px-3 rounded-xl bg-[#E7F3FF] dark:bg-[#3A3B3C] text-[#1877F2] dark:text-[#2D88FF] font-bold text-xs text-center">
+              📞 Call Now
+            </a>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // =========================================================
+    // 10. MOBILE MONEY CHECKOUT (AIRTEL / MTN / ZAMTEL)
+    // =========================================================
+    function openMoMoCheckout(title, amount, code, preselectedPropId = '') {
+      currentMoMoState = {
+        title,
+        amount,
+        code,
+        operator: 'Airtel Money',
+        targetPropId: preselectedPropId || (properties[0] ? properties[0].id : '')
+      };
+
+      const isPropertyItem = ['urgent', 'featured', 'pro', 'verified_owner', 'site_verified', 'verified_compound', 'bundle'].includes(code);
+      const propWrap = document.getElementById('momo-property-select-wrap');
+      const propSelect = document.getElementById('momo-target-property');
+
+      if (isPropertyItem && properties.length > 0) {
+        propWrap.classList.remove('hidden');
+        propSelect.innerHTML = properties.map(p => `<option value="${p.id}" ${p.id === currentMoMoState.targetPropId ? 'selected' : ''}>${p.title} (${p.area})</option>`).join('');
+      } else {
+        propWrap.classList.add('hidden');
+      }
+
+      document.getElementById('momo-item-title').textContent = title;
+      document.getElementById('momo-amount').textContent = `K${amount.toLocaleString()}.00`;
+      document.getElementById('momo-fallback-amt').textContent = `K${amount}`;
+      selectOperator('Airtel Money');
+
+      // Reset body if a receipt was previously shown
+      document.getElementById('momo-modal').classList.remove('hidden');
+    }
+
+    function selectOperator(opName) {
+      currentMoMoState.operator = opName;
+      ['Airtel Money', 'MTN MoMo', 'Zamtel Kwacha'].forEach(op => {
+        const btn = document.getElementById(`op-${op}`);
+        if (!btn) return;
+        if (op === opName) {
+          btn.classList.add('border-2', 'border-[#1877F2]', 'bg-blue-50', 'dark:bg-blue-950/40');
+          btn.classList.remove('border', 'border-gray-300', 'dark:border-[#4E4F50]');
+        } else {
+          btn.classList.remove('border-2', 'border-[#1877F2]', 'bg-blue-50', 'dark:bg-blue-950/40');
+          btn.classList.add('border', 'border-gray-300', 'dark:border-[#4E4F50]');
+        }
+      });
+    }
+
+    function processMoMoPayment() {
+      const phone = document.getElementById('momo-phone').value.trim();
+      const manualTx = document.getElementById('momo-tx-id').value.trim();
+      const selectedPropId = document.getElementById('momo-target-property')?.value || currentMoMoState.targetPropId;
+
+      if (!phone && !manualTx) {
+        showToast('Please enter your +260 mobile number or Transaction ID');
+        return;
+      }
+
+      // Apply boost or verification badge immediately to the target property
+      const targetProp = properties.find(p => p.id === selectedPropId);
+      if (targetProp) {
+        const c = currentMoMoState.code;
+        if (c === 'urgent') targetProp.boost = 'urgent';
+        if (c === 'featured' || c === 'pro') targetProp.boost = 'featured';
+        if (c === 'verified_owner') targetProp.verification = 'verified_owner';
+        if (c === 'site_verified') targetProp.verification = 'site_verified';
+        if (c === 'verified_compound') targetProp.verification = 'verified_compound';
+        if (c === 'bundle') {
+          targetProp.boost = 'featured';
+          targetProp.verification = 'site_verified';
+        }
+        saveState();
+        renderProperties();
+        renderLandlordManager();
+      }
+
+      const refNumber = manualTx || ('KWH-' + Math.floor(100000 + Math.random() * 900000));
+      showToast(`✅ Payment of K${currentMoMoState.amount} confirmed via ${currentMoMoState.operator}!`);
+
+      // Show instant Digital ZMW Receipt inside modal
+      const body = document.getElementById('momo-body');
+      const originalHTML = body.innerHTML;
+      body.innerHTML = `
+        <div class="text-center py-4 space-y-3">
+          <div class="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto">✓</div>
+          <h4 class="font-extrabold text-lg text-emerald-600">Mobile Money Payment Confirmed!</h4>
+          <p class="text-xs text-gray-600 dark:text-[#B0B3B8]">Your package is now live on KWAHAE ESTATE SERVICES.</p>
+          <div class="p-3.5 rounded-xl bg-[#F0F2F5] dark:bg-[#3A3B3C] text-left text-xs space-y-1.5">
+            <div class="flex justify-between"><span class="text-gray-500">Package:</span><strong>${currentMoMoState.title}</strong></div>
+            <div class="flex justify-between"><span class="text-gray-500">Amount Paid:</span><strong class="text-[#1877F2]">K${currentMoMoState.amount}.00 ZMW</strong></div>
+            <div class="flex justify-between"><span class="text-gray-500">Network:</span><strong>${currentMoMoState.operator} (${phone})</strong></div>
+            <div class="flex justify-between"><span class="text-gray-500">Receipt Ref:</span><strong>${refNumber}</strong></div>
+          </div>
+          <button id="receipt-done-btn" class="w-full py-3 rounded-xl bg-[#1877F2] text-white font-extrabold text-sm">Done & Return to App</button>
+        </div>
+      `;
+
+      document.getElementById('receipt-done-btn').onclick = () => {
+        closeModal('momo-modal');
+        setTimeout(() => { body.innerHTML = originalHTML; }, 200);
+      };
+    }
+
+    // =========================================================
+    // 11. WHATSAPP LEAD ROUTING & UTILITY HELPERS
+    // =========================================================
+    function triggerWhatsApp(label, phone, message) {
+      const cleanPhone = phone.replace(/[^0-9]/g, '');
+      const encodedMsg = encodeURIComponent(message);
+      const waUrl = cleanPhone ? `https://wa.me/${cleanPhone}?text=${encodedMsg}` : `https://wa.me/?text=${encodedMsg}`;
+      showToast(`Opening WhatsApp for ${label}...`);
+      window.open(waUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    let toastTimer;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.add('hidden'), 3200);
+    }
+
+    // Initialize on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      updateSavedCounter();
+      renderProperties();
+      renderServices();
+    });
+  </script>
+</body>
+</html>
